@@ -1,0 +1,62 @@
+                              3 - Routing
+==============================================================================================
+                    1 - Creating Routes
+===============================================================================================
+            1 - Creating Routes as Attributes or Annotations
+            2 - Creating Routes in YAML, XML or PHP Files
+            3 - Matching HTTP Methods
+            4 - Matching Expressions
+            5 - Debugging Routes
+===============================================================================================
+                       2 - Route Parameters
+===============================================================================================
+            1 - Parameters Validation
+            2 - Optional Parameters
+            3 - Priority Parameter
+            4 - Parameter Conversion
+            5 - Special Parameters
+            6 - Extra Parameters
+            7 - Slash Characters in Route Parameters
+===============================================================================================
+                      3 - Route Groups and Prefixes
+===============================================================================================
+                     4 - Getting the Route Name and Parameters
+===============================================================================================
+                     5 - Special Routes
+===============================================================================================
+            1 - Rendering a Template Directly from a Route
+            2 - Redirecting to URLs and Routes Directly from a Route
+===============================================================================================
+                    6 - Sub-Domain Routing
+===============================================================================================
+                    7 - Localized Routes (i18n)
+===============================================================================================
+                   8 - Stateless Routes
+===============================================================================================
+                   9 - Generating URLs
+===============================================================================================
+            1 - Generating URLs in Controllers
+            2 - Generating URLs in Services
+            3 - Generating URLs in Templates
+            4 - Generating URLs in JavaScript
+            5 - Generating URLs in Commands
+            6 - Checking if a Route Exists
+            7 - Forcing HTTPS on Generated URLs
+===============================================================================================
+                  10 - Troubleshooting
+===============================================================================================
+                 11 -  Learn more about Routing
+--------------------------------------------------------------------------------------------
+1 How to Create a custom Route Loader
+       Built-in Route Loaders
+        What is a Custom Route Loader
+        Loading Routes
+        Loading Routes with a Custom Service
+        Creating a custom Loader
+            Using the Custom Loader
+        More Advanced Loaders
+--------------------------------------------------------------
+Looking up Routes from a Database: Symfony CMF DynamicRouter
+
+
+===============================================================================================
