@@ -1,0 +1,94 @@
+-----------------------------------------------------------------------------------------------
+                                         3 - Basic concepts
+===============================================================================================
+                                    1 - Request lifecycle
+-----------------------------------------------------------------------------------------------
+     1 - A typical HTTP request consists of the following:
+          A URL: e.g. /index.php/apps/myapp/something
+          Request Parameters: e.g. ?something=true&name=tom
+          A Method: e.g. GET
+          Request headers: e.g. Accept: application/json
+        -------------------------------------------------------------------------------------
+     2 - Front controller
+     #In the beginning, all requests are sent to Nextcloud’s index.php which in turn executes lib/base.php. This file inspects the HTTP headers, abstracts away differences between different Web servers and initializes the basic classes. Afterwards the basic apps are being loaded in the following order:
+           Authentication backends
+           Filesystem
+           Logging
+
+    #The type of the app is determined by inspecting the app’s configuration file (appinfo/info.xml). Loading apps means that the main file (appinfo/app.php) of each installed app is being loaded and executed. That means that if you want to execute code before a specific app is being run, you can place code in your app’s Navigation and pre-app configuration file.
+
+    #Afterwards the following steps are performed:
+          Try to authenticate the user
+          Load and execute all the remaining apps’ Navigation and pre-app configuration files
+          Load and run all the routes in the apps’ appinfo/routes.php
+          Execute the router
+    --------------------------------------------------------------------------------------
+
+===============================================================================================
+                                    2 - Routing
+-----------------------------------------------------------------------------------------------
+        1 - Extracting values from the URL
+        2 - Matching subURLs
+        3 - Default values for subURL
+        4 - Registering resources
+        5 - Using the URLGenerator
+===============================================================================================
+                                    3 - Dependency injection
+-----------------------------------------------------------------------------------------------
+        1 - Dependency injection
+        2 - Using a container
+        3 - How the container works
+        4 - Use automatic dependency assembly (recommended)
+        5 - Which classes should be added
+===============================================================================================
+                                    4 - Controllers
+-----------------------------------------------------------------------------------------------
+        1 - Connecting a controller and a route
+        2 - Getting request parameters
+        3 - Responses
+        4 - Authentication
+        5 - Rate limiting
+        6 - Brute-force protection
+===============================================================================================
+                                    5 - Middlewares
+-----------------------------------------------------------------------------------------------
+        1 - Parsing annotations
+===============================================================================================
+                                    6 - Events
+-----------------------------------------------------------------------------------------------
+        1 - Overview
+        2 - OCP event dispatcher
+        3 - Symfony event dispatcher
+        4 - Hooks
+        5 - Public emitter
+===============================================================================================
+                                    7 - Front-end
+-----------------------------------------------------------------------------------------------
+        1 - Templates
+        2 - JavaScript
+        3 - CSS
+        4 - Translation
+        5 - Theming support
+===============================================================================================
+                                    8 - Background jobs (Cron)
+-----------------------------------------------------------------------------------------------
+        1 - Types of background jobs
+        2 - Writing a background job
+        3 - Registering a background job
+===============================================================================================
+                                    9 - Logging
+-----------------------------------------------------------------------------------------------
+===============================================================================================
+                                    10 - Storage and database
+-----------------------------------------------------------------------------------------------
+        1 - Migrations
+        2 - Database access
+        3 - Configuration
+        4 - Filesystem
+        5 - AppData
+===============================================================================================
+                                    11 - Testing
+-----------------------------------------------------------------------------------------------
+        PHP
+===============================================================================================
+

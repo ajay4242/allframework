@@ -1,0 +1,107 @@
+-----------------------------------------------------------------------------------------------
+                                 3 - Architecture Concepts
+-----------------------------------------------------------------------------------------------
+    1 - Request Lifecycle
+    2 - Service Container
+    3 - Service Providers
+    4 - Facades
+===============================================================================================
+                                     1 - Request Lifecycle
+   -------------------------------------------------------------------------------------------
+    1 - Introduction
+    2 - Lifecycle Overview
+             ----------------------------------------------------------------------------------
+        1 - First Steps
+             #The entry point for all requests to a Laravel application is the public/index.php file. All requests are directed to this file by your web server (Apache / Nginx) configuration. The index.php file doesn't contain much code. Rather, it is a starting point for loading the rest of the framework.
+
+             #The index.php file loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php. The first action taken by Laravel itself is to create an instance of the application / service containe
+             ---------------------------------------------------------------------------------
+        2 - HTTP / Console Kernels
+             #Next, the incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application.
+             #which is located in app/Http/Kernel.php.,app/console/kernel.php
+             
+             #The HTTP kernel extends the Illuminate\Foundation\Http\Kernel class, which defines an array of bootstrappers that will be run before the request is executed. These bootstrappers configure error handling, configure logging, detect the application environment, and perform other tasks that need to be done before the request is actually handled. Typically, these classes handle internal Laravel configuration that you do not need to worry about.
+
+             #The HTTP kernel also defines a list of HTTP middleware that all requests must pass through before being handled by the application. These middleware handle reading and writing the HTTP session, determining if the application is in maintenance mode, verifying the CSRF token, and more. We'll talk more about these soon.
+
+            #The method signature for the HTTP kernel's handle method is quite simple: it receives a Request and returns a Response. Think of the kernel as being a big black box that represents your entire application. Feed it HTTP requests and it will return HTTP responses.
+             ----------------------------------------------------------------------------------
+             3 - Service Providers
+             4 - Routing
+             5 - Finishing Up
+    3 - Focus On Service Providers
+---------------------------------------------------------------------------------------------
+ 1 - Introduction
+ --------------------------------------------------------------------------------------------
+    2 - Lifecycle Overview
+---------------------------------------------------------------------------------------------
+             1 - First Steps
+             2 - HTTP / Console Kernels
+             3 - Service Providers
+             4 - Routing
+             5 - Finishing Up
+---------------------------------------------------------------------------------------------
+    3 - Focus On Service Providers
+---------------------------------------------------------------------------------------------
+ =============================================================================================
+                                     2 -  Service Container
+ -------------------------------------------------------------------------------------------   
+
+    1 - Introduction
+        1 - Zero Configuration Resolution
+        2 - When To Use The Container
+    2 - Binding
+        1 - Binding Basics
+        2 - Binding Interfaces To Implementations
+        3 - Contextual Binding
+        4 - Binding Primitives
+        5 - Binding Typed Variadics
+        6 - Tagging
+        7 - Extending Bindings
+    3 - Resolving
+        1 - The Make Method
+        2 - Automatic Injection
+    4 - Method Invocation & Injection
+    5 - Container Events
+    6 - PSR-11
+----------------------------------------------------------------------------------------------
+1 - Introduction
+        1 - Zero Configuration Resolution
+        2 - When To Use The Container
+    2 - Binding
+        1 - Binding Basics
+        2 - Binding Interfaces To Implementations
+        3 - Contextual Binding
+        4 - Binding Primitives
+        5 - Binding Typed Variadics
+        6 - Tagging
+        7 - Extending Bindings
+    3 - Resolving
+        1 - The Make Method
+        2 - Automatic Injection
+    4 - Method Invocation & Injection
+    5 - Container Events
+    6 - PSR-11
+==============================================================================================
+                                   3 - Service Providers
+----------------------------------------------------------------------------------------------
+    1 - Introduction
+    2 - Writing Service Providers
+         1 - The Register Method
+         2 - The Boot Method
+    3 - Registering Providers
+    4 - Deferred Providers
+
+==============================================================================================
+                                    4 - Facades
+----------------------------------------------------------------------------------------------
+
+    1 - Introduction
+    2 - When To Use Facades
+        1 - Facades Vs. Dependency Injection
+        2 - Facades Vs. Helper Functions
+    3 - How Facades Work
+    4 - Real-Time Facades
+    5 - Facade Class Reference
+
+==============================================================================================
