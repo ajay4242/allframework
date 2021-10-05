@@ -1,0 +1,117 @@
+                              laravel documentation
+==============================================================================================
+     1 - Prologue
+     2 - Getting Started
+     3 - Architecture Concepts
+     4 - The Basics
+     5 - Digging Deeper
+     6 - Security
+     7 - Database
+     8 - Eloquent ORM
+     9 - Testing
+     10 - Packages
+     11 - API Documentation
+----------------------------------------------------------------------------------------------
+                                    1 - Prologue
+----------------------------------------------------------------------------------------------     1 - Release Notes
+    2 - Upgrade Guide
+    3 - Contribution Guide
+----------------------------------------------------------------------------------------------                               2 - Getting Started
+----------------------------------------------------------------------------------------------         1 - Installation
+        2 - Configuration
+        3 - Directory Structure
+        4 - Starter Kits
+        5 - Deployment
+----------------------------------------------------------------------------------------------
+                              3 - Architecture Concepts
+----------------------------------------------------------------------------------------------         1 - Request Lifecycle
+        2 - Service Container
+        3 - Service Providers
+        4 - Facades
+----------------------------------------------------------------------------------------------                              4 - The Basics
+----------------------------------------------------------------------------------------------
+        1 - Routing
+        2 - Middleware
+        3 - CSRF Protection
+        4 - Controllers
+        5 - Requests
+        6 - Responses
+        7 - Views
+        8 - Blade Templates
+        9 - URL Generation
+        10 - Session
+        11 - Validation
+        12 - Error Handling
+        13 - Logging
+----------------------------------------------------------------------------------------------
+                          5 - Digging Deeper
+----------------------------------------------------------------------------------------------         1 - Artisan Console
+        2 - Broadcasting
+        3 - Cache
+        4 - Collections
+        5 - Compiling Assets
+        6 - Contracts
+        7 - Events
+        8 - File Storage
+        9 - Helpers
+        10 - HTTP Client
+        11 - Localization
+        12 - Mail
+        13 - Notifications
+        14 - Package Development
+        15 - Queues
+        16 - Rate Limiting
+        17 - Task Scheduling
+----------------------------------------------------------------------------------------------                       6 - Security
+----------------------------------------------------------------------------------------------
+        1 - Authentication
+        2 - Authorization
+        3 - Email Verification
+        4 - Encryption
+        5 - Hashing
+        6 - Password Reset
+----------------------------------------------------------------------------------------------                           7 - Database
+----------------------------------------------------------------------------------------------         1- Getting Started
+        2- Query Builder
+        3- Pagination
+        4- Migrations
+        5- Seeding
+        6- Redis
+----------------------------------------------------------------------------------------------                        8 - Eloquent ORM
+----------------------------------------------------------------------------------------------         1 - Getting Started
+        2 - Relationships
+        3 - Collections
+        4 - Mutators / Casts
+        5 - API Resources
+        6 - Serialization
+----------------------------------------------------------------------------------------------                          9 - Testing
+----------------------------------------------------------------------------------------------         1 - Getting Started
+        2 - HTTP Tests
+        3 - Console Tests
+        4 - Browser Tests
+        5 - Database
+        6 - Mocking
+----------------------------------------------------------------------------------------------        
+                           10 - Packages
+----------------------------------------------------------------------------------------------         1 - Breeze
+        2 - Cashier (Stripe)
+        3 - Cashier (Paddle)
+        4 - Dusk
+        5 - Envoy
+        6 - Fortify
+        7 - Homestead
+        8 - Horizon
+        9 - Jetstream
+        10 - Octane
+        11 - Passport
+        12 - Sail
+        13 - Sanctum
+        13 - Scout
+        14 - Socialite
+        15 - Telescope
+        16 - Valet
+----------------------------------------------------------------------------------------------        
+   11 - API Documentation
+
+-----------------------------------------------------------------------------------------------
+

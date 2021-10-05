@@ -1,11 +1,11 @@
-# allframework
+    # allframework
                          Basics stracture
 Assets
-CSS
-Images
-JS
+    CSS
+    Images
+    JS
 Config
-Database Config File
+    Database Config File
 Controllers
 Model
 Views

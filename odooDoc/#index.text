@@ -1,0 +1,87 @@
+odoo14 developer documentation 
+
+ odoo-bin scaffold your_module_name path
+ Click on the Manage Databases link. This will navigate to http://
+localhost:8069/web/database/manager
+==============================================================================================
+1 Tutorials
+----------------------------------------------------------------------------------------------
+   1 Getting Started
+        Chapter 1: Architecture Overview
+        Chapter 2: Development Environment Set-up
+        Chapter 3: A New Application
+        Chapter 4: Models And Basic Fields
+        Chapter 5: Security - A Brief Introduction
+        Chapter 6: Finally, Some UI To Play With
+        Chapter 7: Basic Views
+        Chapter 8: Relations Between Models
+        Chapter 9: Computed Fields And Onchanges
+        Chapter 10: Ready For Some Action?
+        Chapter 11: Constraints
+        Chapter 12: Add The Sprinkles
+        Chapter 13: Inheritance
+        Chapter 14: Interact With Other Modules
+        Chapter 15: A Brief History Of QWeb
+        Chapter 16: Polish Your Code And Submit Your PR
+        Advanced B: ACL and Record Rules
+        Advanced C: Master and Demo Data
+        Advanced E: Python Unit Tests
+        Advanced J: PDF Reports
+        Advanced K: Dashboards
+   2 Theme Tutorial
+   3 Building a Website
+   4 Building a Module
+   5 Profiling Odoo code
+   6 Multi-company Guidelines
+-----------------------------------------------------------------------------------------------
+2 Reference Guides
+
+   1 Server Addons
+        ORM API
+        Data Files
+        Actions
+        Views
+        Module Manifests
+        QWeb Reports
+        Security in Odoo
+        Testing Odoo
+        Web Controllers
+        Mixins and Useful Classes
+   2 Javascript Modules
+        Javascript Cheatsheet
+        Javascript Reference
+        Mobile JavaScript
+        QWeb Templates
+-----------------------------------------------------------------------------------------------
+3 Misc
+
+   1 API
+        External API
+        In-App Purchase
+   2 Internationalization
+        Accounting Localization
+        Translating Modules
+   3 Others
+        Odoo Guidelines
+        CLI: odoo-bin
+        Internet of Things
+
+===============================================================================================
+Chapter 1: Architecture Overview
+-----------------------------------------------------------------------------------------------
+Composition of a module
+     An Odoo module can contain a number of elements:
+   Business objects
+        A business object (e.g. an invoice) is declared as a Python class. The fields defined in these classes are automatically mapped to database columns thanks to the ORM layer.
+   Object views
+       Define UI display
+   Data files
+        XML or CSV files declaring the model data:
+        views or reports,
+        configuration data (modules parametrization, security rules),
+        demonstration data
+        and more
+   Web controllers
+         Handle requests from web browsers
+   Static web data
+         Images, CSS or JavaScript files used by the web interface or website

@@ -1,0 +1,70 @@
+ django rest documentation
+ =============================================================================================
+                                Quickstart
+---------------------------------------------------------------------------------------------
+    1 - Serialization
+    2 - Requests and responses
+    3 - Class based views
+    4 - Authentication and permissions
+    5 - Relationships and hyperlinked APIs
+    6 - Viewsets and routers
+----------------------------------------------------------------------------------------------
+                                Tutorial 1: Serialization
+----------------------------------------------------------------------------------------------
+    1 - Introduction
+    2 - Setting up a new environment
+    3 - Getting started
+    4 - Creating a model to work with
+    5 - Creating a Serializer class
+    6 - Working with Serializers
+    7 - Using ModelSerializers
+    8 - Writing regular Django views using our Serializer
+    9 - Testing our first attempt at a Web API
+    1 - 0Where are we no
+----------------------------------------------------------------------------------------------
+                                Tutorial 2: Requests and Responses
+----------------------------------------------------------------------------------------------
+    1 - Request objects
+    2 - Response objects
+    3 - Status codes
+    4 - Wrapping API views
+    5 - Pulling it all together
+    6 - Adding optional format suffixes to our URLs
+    7 - How's it looking?
+    8 - What's next?
+----------------------------------------------------------------------------------------------
+                                Tutorial 3: Class-based Views
+----------------------------------------------------------------------------------------------
+    1 - Rewriting our API using class-based views
+    2 - Using mixins
+    3 - Using generic class-based views
+----------------------------------------------------------------------------------------------
+                                Tutorial 4: Authentication & Permissions
+----------------------------------------------------------------------------------------------
+    1 - Adding information to our model
+    2 - Adding endpoints for our User models
+    3 - Associating Snippets with Users
+    4 - Updating our serializer
+    5 - Adding required permissions to views
+    6 - Adding login to the Browsable API
+    7 - Object level permissions
+    8 - Authenticating with the API
+    9 - Summar
+----------------------------------------------------------------------------------------------
+                             Tutorial 5: Relationships & Hyperlinked APIs
+----------------------------------------------------------------------------------------------
+    1 - Creating an endpoint for the root of our API
+    2 - Creating an endpoint for the highlighted snippets
+    3 - Hyperlinking our API
+    4 - Making sure our URL patterns are named
+    5 - Adding pagination
+    6 - Browsing the API
+----------------------------------------------------------------------------------------------
+                             Tutorial 6: ViewSets & Routers
+----------------------------------------------------------------------------------------------
+    1 - Refactoring to use ViewSets
+    2 - Binding ViewSets to URLs explicitly
+    3 - Using Routers
+    4 - Trade-offs between views vs viewsets
+----------------------------------------------------------------------------------------------
+==============================================================================================

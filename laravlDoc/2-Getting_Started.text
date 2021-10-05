@@ -1,0 +1,137 @@
+----------------------------------------------------------------------------------------------                               2 - Getting Started
+----------------------------------------------------------------------------------------------         1 - Installation
+        2 - Configuration
+        3 - Directory Structure
+        4 - Starter Kits
+        5 - Deployment
+========================================================================================        
+-------------------------------------------------------------------------------------------
+                             1 - Installation
+---------------------------------------------------------------------------------------------- crate a laravle project
+composer create-project laravel/laravel example-app
+cd example-app
+php artisan serve
+
+composer global require laravel/installer
+    #Make sure to place Composer's system-wide vendor bin directory in your $PATH
+laravel new example-app  
+cd example-app
+laravel new example-app --git
+laravel new example-app --git --branch="main"
+laravel new example-app --github
+laravel new example-app --github="--public"
+laravel new example-app --github="--public" --organization="laravel"
+php artisan serve  # to start server
+==============================================================================================
+-----------------------------------------------------------------------------------------------
+                          2 configuractionm
+ ---------------------------------------------------------------------------------------------
+ =============================================================================================
+ 1 - Introduction
+ 2 - Environment Configuration
+        1 - Environment Variable Types
+        2 - Retrieving Environment Configuration
+        3 - Determining The Current Environment
+ 3 - Accessing Configuration Values
+ 4 - Configuration Caching
+ 5 - Debug Mode
+ 6 - Maintenance Mode
+ ============================================================================================
+ --------------------------------------------------------------------------------------------- 1 - Introduction
+ 2 - Environment Configuration
+       Initial Configuration
+           config/app.php 
+       Environment Based Configuration
+          .env   / .env.example
+    1 - Environment Variable Types
+    2 - Retrieving Environment Configuration
+         'debug' => env('APP_DEBUG'),
+         'debug' => env('APP_DEBUG', false), 
+                  #The second value passed to the env function is the "default value"
+    3 - Determining The Current Environment
+         #The current application environment is determined via the APP_ENV variable from your .env file. You may access this value via the environment method on the App facade:
+         
+      use Illuminate\Support\Facades\App;
+      $environment = App::environment();
+       ------------------------------------------------------------------
+ 3 - Accessing Configuration Values
+     $value = config('app.timezone');
+             /# Retrieve a default value if the configuration value does not exist...
+    $value = config('app.timezone', 'Asia/Seoul');
+ 
+ 4 - Configuration Caching
+     php artisan config:cache 
+ 5 - Debug Mode
+ 6 - Maintenance Mode                         
+===============================================================================================                                       3   Directory Structure
+---------------------------------------------------------------------------------------------
+3 - Directory Structure
+-----------------------------------------------------------------------------------------
+    Introduction
+    The Root Directory
+        The app Directory
+        The bootstrap Directory
+        The config Directory
+        The database Directory
+        The public Directory
+        The resources Directory
+        The routes Directory
+        The storage Directory
+        The tests Directory
+        The vendor Directory
+    The App Directory
+        The Broadcasting Directory
+        The Console Directory
+        The Events Directory
+        The Exceptions Directory
+        The Http Directory
+        The Jobs Directory
+        The Listeners Directory
+        The Mail Directory
+        The Models Directory
+        The Notifications Directory
+        The Policies Directory
+        The Providers Directory
+        The Rules Directory
+===============================================================================================
+-----------------------------------------------------------------------------------------------
+4 -  Starter Kits
+----------------------------------------------------------------------------------------------
+    1 - Introduction
+    2 - Laravel Breeze
+        Installation
+        Breeze & Inertia
+    3 - Laravel Jetstream
+---------------------------------------------------------------------------------------------
+  1 - Introduction
+    2 - Laravel Breeze
+        Installation
+         laravel new name
+           cd example-app
+           php artisan migrate
+           
+        Breeze & Inertia
+        php artisan breeze:install
+
+         npm install
+         npm run dev
+         php artisan migrate
+    3 - Laravel Jetstream
+===============================================================================================
+-----------------------------------------------------------------------------------------------
+ 5 - Deploymen
+ ---------------------------------------------------------------------------------------------
+
+    Introduction
+    Server Requirements
+    Server Configuration
+        Nginx
+    Optimization
+        Autoloader Optimization
+        Optimizing Configuration Loading
+        Optimizing Route Loading
+        Optimizing View Loading
+    Debug Mode
+    Deploying With Forge / Vapor
+   ------------------------------------------------------------------------------------------- 
+==============================================================================================   

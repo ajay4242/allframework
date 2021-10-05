@@ -1,0 +1,39 @@
+============================================================================================
+Getting Started
+-----------------------------------------------------------------------------------------------
+Start here to learn the essentials about developing web applications with Symfony.
+
+    Chapter 1. Setup
+    Chapter 2. Creating Pages
+    Chapter 3. Routing
+    Chapter 4. Controllers
+    Chapter 5. Templates
+    Chapter 6. Configuration
+-----------------------------------------------------------------------------------------------
+Guides & Tutorials
+----------------------------------------------------------------------------------------------
+    Bundles
+    Cache
+    Console
+    Contributing
+    Databases (Doctrine ORM)
+    Deployment
+    Event Dispatcher
+    Flex
+    Forms
+    Front-end
+    HTTP Cache
+    Logging
+    Mailer (email)
+    Messenger
+    Performance
+    Profiler
+    Security
+    Serializer
+    Service Container
+    Sessions
+    Testing
+    Translation (i18n)
+    Validation
+    WebLink
+    Workflow

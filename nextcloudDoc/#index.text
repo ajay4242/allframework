@@ -1,0 +1,84 @@
+Nextcloud developer documentation
+===============================================================================================
+Table of contents
+-----------------------------------------------------------------------------------------------
+    1 Prologue
+        Code of conduct
+        Help and communication
+        Bugtracker
+        Development process
+        Security guidelines
+    2 Getting started
+        Development environment
+        Coding style & general guidelines
+        Debugging
+    3 Basic concepts
+        Request lifecycle
+        Routing
+        Dependency injection
+        Controllers
+        Middlewares
+        Events
+        Front-end
+        Background jobs (Cron)
+        Logging
+        Storage and database
+        Testing
+    4 App development
+        Introduction
+        Tutorial
+        Bootstrapping
+        App metadata
+        Navigation and pre-app configuration
+        Dependency management
+    5 Core development
+        Unit-Testing
+        External API
+        How to test …
+    6 Digging deeper
+        API reference
+        Changelog
+        Debugging
+        Classloader
+        Continuous Integration
+        Nextcloud Flow
+        JavaScript APIs
+        NPM
+        Notifications
+        Performance considerations
+        PSR
+        Public Pages
+        Repair steps
+        REST APIs
+        Search
+        Settings
+        Two-factor providers
+        User management
+        Dashboard
+        Web Host Metadata
+    7 App publishing and maintenance
+        Code signing
+        App store publishing
+        Release Automation
+        App upgrade guide
+    8 Design guidelines
+        Introduction
+        New button
+        App navigation menu
+        Settings
+        Main content
+        Content list
+        Popover menu
+        HTML elements
+        SCSS
+        Icons
+    9 Clients and Client APIs
+        Android
+        Webdav
+        OCS API
+        Login Flow
+        Remote wipe
+        OCS Share API
+        OCS Sharee API
+        Activity API
+=============================================================================================
