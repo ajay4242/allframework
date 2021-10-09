@@ -1,0 +1,20 @@
+                                   10 Storage and database
+---------------------------------------------------------------------------------------------
+1- Migrations
+   1. Migration 1: Schema change
+   2. Migration 1: Post schema change
+   3. Migration 2: Schema change
+   Console commands
+2- Database access
+   1- Transactions
+   2- Mappers
+   3- Entities
+3- Configuration
+   1- System values
+   2- App values
+   3- User values
+4- Filesystem
+   1- Writing to a file
+   2- Reading from a file
+5- AppData
+   1- The simple filesystem

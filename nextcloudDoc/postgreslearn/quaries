@@ -1,0 +1,62 @@
+https://www3.ntu.edu.sg/home/ehchua/programming/sql/PostgreSQL_GetStarted.html
+ ---------------------------------------------------------------------------------------------                     
+                              1- conection
+----------------------------------------------------------------------------------------------
+ # to connect localhost
+ 1. sudo su - postgres
+  psql
+2. psql "host=localhost port=5432 dbname=<db> user=<user> password=<password>"
+
+# to conect remote server
+psql "sslmode=disable dbname=postgres user=postgres hostaddr=34.126.218.215"
+psd ajay1234
+-----------------------------------------------------------------------------------------------
+                              2-create user and database 
+---------------------------------------------------------------------------------------------- 
+
+# to crate user and database
+create user cloud with encrypted password 'cloud1234';
+ALTER ROLE cloud WITH createdb ;
+
+CREATE DATABASE yourdbname;
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
+CREATE DATABASE dbname OWNER rolename;
+GRANT TEMP ON DATABASE databaseName TO userName;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO userName;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO userName;
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO userName;
+
+CREATE DATABASE cloud_test OWNER cloud;
+GRANT TEMP ON DATABASE cloud_test TO cloud;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO cloud;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO cloud;
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO cloud;
+
+-----------------------------------------------------------------------------------------------
+                                     3- conect with database and TABLES
+ --------------------------------------------------------------------------------------------
+ Notes:
+
+Take note that there are two sets of commands:
+psql commands: such as \c, \l, \dt.
+SQL commands: such as CREATE DATABASE, CREATE TABLE and SELECT. SQL command KEYWORDS are not case sensitive. I show them in uppercase for clarity. PostgreSQL automatically converts all names (identifiers) to lowercase (even you type in uppercase or mixed case). To use uppercase or mixed case, you need to double-quote the names.
+You need to end your SQL commands with a semi-colon (;) or \g. If you forget to enter a semi-colon, the command-prompt changes to "dbname-#" to indicate continuation (A SQL command can span many lines). You can enter the semi-colon on the new line.
+-----------------------------------------------------------------------------------------------
+More on psql commands
+    1. \?: show all psql commands.
+    2. \h sql-command: show syntax on SQL command.
+    3. \c dbname [username]: Connect to database, with an optional username (or \connect).
+    4. \l: List all database (or \list).
+    5. \d: Display all tables, indexes, views, and sequences.
+    6. \dt: Display all tables.
+    7. \di: Display all indexes.
+    8. \dv: Display all views.
+    9. \ds: Display all sequences.
+   10. \dT: Display all types.
+   11. \dS: Display all system tables.
+   12. \du: Display all users.
+   13. \x auto|on|off: Toggle|On|Off expanded output mode.
+
+Display Commands: You can append + to show more details.

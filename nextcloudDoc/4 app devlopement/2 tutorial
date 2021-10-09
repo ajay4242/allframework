@@ -1,0 +1,83 @@
+
+2- Tutorial
+==============================================================================================
+1- Setup
+git clone git@github.com:nextcloud/server.git --branch $BRANCH
+cd server
+git submodule update --init
+
+#in side config/config.php
+#<?php
+$CONFIG = array (
+    'debug' => true,
+    ... configuration goes here ...
+);
+#PHP errors are logged to data/nextcloud.log 
+
+#to start server
+cd nextcloud
+php -S localhost:8080
+
+#Afterwards a skeleton app can be created in the 
+https://apps.nextcloud.com/developer/apps/generate
+
+#Download the compressed file that contains the generated app and extract it into your apps/ directory. Afterwards the application can be enabled on the apps page.
+http://localhost:8080/index.php/settings/apps
+
+#The first basic app is now available at 
+http://localhost:8080/index.php/apps/yourappid/
+----------------------------------------------------------------------------------------------
+                           2- Routes & controllers
+----------------------------------------------------------------------------------------------
+#A typical web application consists of server side and client side code. The glue between those two parts are the URLs. In case of the notes app the following URLs will be used:
+
+GET /: Returns the interface in HTML
+GET /notes: Returns a list of all notes in JSON
+GET /notes/1: Returns a note with the id 1 in JSON
+DELETE /notes/1: Deletes a note with the id 1
+POST /notes: Creates a new note by passing in JSON
+PUT /notes/1: Updates a note with the id 1 by passing in JSON
+
+#On the client side we can call these URLs with the following jQuery code:
+
+// example for calling the PUT /notes/1 URL
+var baseUrl = OC.generateUrl('/apps/notestutorial');
+var note = {
+    title: 'New note',
+    content: 'This is the note text'
+};
+var id = 1;
+$.ajax({
+    url: baseUrl + '/notes/' + id,
+    type: 'PUT',
+    contentType: 'application/json',
+    data: JSON.stringify(note)
+}).done(function (response) {
+    // handle success
+}).fail(function (response, code) {
+    // handle failure
+});
+On the server side we need to register a callback that is executed once the request comes in. The callback itself will be a method on a controller and the controller will be connected to the URL with a route. The controller and route for the page are already set up in notestutorial/appinfo/routes.php:
+
+<?php
+return ['routes' => [
+    ['name' => 'page#index', 'url' => '/', 'verb' => 'GET']
+]];
+----------------------------------------------------------------------------------------------
+3- Database
+----------------------------------------------------------------------------------------------
+4- Connect database & controllers
+----------------------------------------------------------------------------------------------
+5- Making things reusable and decoupling controllers from the database
+----------------------------------------------------------------------------------------------
+6- Writing a test for the controller (recommended)
+----------------------------------------------------------------------------------------------
+    1- Unit tests
+----------------------------------------------------------------------------------------------
+7- Integration tests
+----------------------------------------------------------------------------------------------
+8- Adding a RESTful API (optional)
+----------------------------------------------------------------------------------------------
+9- Building the frontend
+----------------------------------------------------------------------------------------------
+==============================================================================================

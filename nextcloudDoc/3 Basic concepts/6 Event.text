@@ -1,0 +1,25 @@
+                                      5 Events
+======================================================================================
+1 - Overview
+2 - OCP event dispatcher
+---------------------------------------------------------------------------------------
+            1 - Naming scheme
+            2 - Writing events
+            3 - Writing a listener
+            4 - Available Events
+3 - Symfony event dispatcher
+4 - SHooks
+           1 - Available hooks
+           2 - Session
+           3 - UserManager
+           4 - GroupManager
+           5 - Filesystem root
+           6 - Filesystem scanner
+
+5 - Public emitter
+
+
+
+
+
+
